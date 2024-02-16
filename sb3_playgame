@@ -1,0 +1,13 @@
+import gym
+import os
+print(os.environ['PATH'])
+
+env = gym.make("LunarLander-v2")
+
+env.reset()
+
+print("sample action :", env.action_space.sample())
+print("obs space shape", env.observation_space.shape)
+print("sample obs space", env.observation_space.sample())
+
+env.close()
